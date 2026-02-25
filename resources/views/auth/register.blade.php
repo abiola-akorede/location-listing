@@ -1,59 +1,101 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+@extends('layout.app')
+@section('content')
+
+<section class="tz-register">
+    <div class="log-in-pop">
+        <div class="log-in-pop-left">
+            <h1>Hello... <span></span></h1>
+            <p>Don't have an account? Create your account. It's take less then a minutes</p>
+            <h4>Login with social media</h4>
+            <ul>
+                <li><a href="#"><i class="fa-facebook"></i> Rent to Own</a>
+                </li>
+                <li><a href="#"><i class="fa-google"></i> Buy or Sell Propertire+</a>
+                </li>
+                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="log-in-pop-right">
+            <a href="#" class="pop-close" data-dismiss="modal"><img src="images/cancel.png" alt="" />
             </a>
-        </x-slot>
+            <h4>Login</h4>
+            
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
-
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+            @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+        @endif
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+        @if (session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+        @endif
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
+        @endif
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+            <form class="s12" method="POST" action="{{ route('register') }}">
+                @csrf
+                <div>
+                    <div class="input-field s12">
+                        <input type="text" data-ng-model="name" name="name" value="{{ old('name') }}" placeholder="Name" class="validate">
+                        <label>Name</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-field s12">
+                        <input type="email" data-ng-model="email" name="email" value="{{ old('email') }}" placeholder="Email" class="validate">
+                        <label>Email</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-field s12">
+                        <input type="password" name="password" placeholder="Password" class="validate">
+                        <label>Password</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-field s12">
+                        <input type="password" name="password_confirmation" placeholder="Confirm Password" class="validate">
+                        <label>Password</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-field s12">
+                        {{-- <input type="email" data-ng-model="email" name="email" value="{{ old('email') }}" placeholder="Email" class="validate"> --}}
+                        <select name="category"  id="" required class="validate">
+                            <option value="">Select Category</option>
+                            <option value="Customer">Customer</option>
+                            <option value="Service Provider">Service Provider</option>
+                        </select>
+                        {{-- <label>Category</label> --}}
+                    </div>
+                </div>
+                <div>
+                    <div class="input-field s4">
+                        <input type="submit" value="Register" class="waves-effect waves-light log-in-btn"> </div>
+                </div>
+                <div>
+                    <div class="input-field s12"> 
+                        <p>Already has an account? <a href="{{ route('login') }}">Login Here!. </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+    
+@endsection
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>

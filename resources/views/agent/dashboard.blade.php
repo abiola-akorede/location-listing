@@ -7,8 +7,10 @@
         <li class="page-back"><a href="#"><i class="fa fa-backward" aria-hidden="true"></i> Back</a> </li>
     </ul>
 </div>
-<div class="tz-2 tz-2-admin" style="width: 80%;">
+<h4>Vendor Dashboard</h4>
+<div class="tz-2 tz-2-admin">
     <div class="tz-2-com tz-2-main">
+        {{-- <h4>Vendor Dashboard</h4> --}}
         <h4>Manage Booking</h4>
         <div class="tz-2-main-com bot-sp-20"> 
             

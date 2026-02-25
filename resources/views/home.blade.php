@@ -24,7 +24,7 @@
             </div> --}}
             <div class="row">
 				<div class="col-md-12">
-					<div class="pg-elem" style="background: purple;">
+					<div class="pg-elem" style="background: #002147;">
 						{{-- <h3>Variable Width Tabs</h3> <span>Local directory is the smartest way to find the best services for all your works</span> --}}
 						<div class="pg-elem-inn ele-btn">
 							<div>
@@ -111,28 +111,28 @@
     <div class="container">
         <div class="row">
             <!--HOME PROJECTS: 1-->
-            <div class="col-md-3 col-sm-6" style="border-radius: 45px; background-color: purple;">
+            <div class="col-md-3 col-sm-6" style="border-radius: 45px; background-color: #002147;;">
                 <div class="hom-pro"  style="background-color: rgb(232, 240, 245); border-radius: 20px;"> <img src="images/icon/office.jpeg" alt="" />
+                    <h4> Over 5000 Building Projects  </h4>
+                    <p>Choose from a collection of handpicked luxury villas & apartments</p> <a href="#!" style="background: #D9A441;">Explore Now</a> </div>
+            </div>
+            <!--HOME PROJECTS: 1-->
+            <div class="col-md-3 col-sm-6" style="border-radius: 45px; background-color: #002147;;">
+                <div class="hom-pro" style="background-color: rgb(232, 240, 245); border-radius: 20px;" style="background: #D9A441;"> <img src="images/icon/office.jpeg" alt="" />
+                    <h4> 20 Million Worth of Investment </h4>
+                    <p>Choose from a collection of handpicked luxury villas & apartments</p> <a href="#!" style="background: #D9A441;"> Become an Investor </a> </div>
+            </div>
+            <!--HOME PROJECTS: 1-->
+            <div class="col-md-3 col-sm-6" style="border-radius: 45px; background-color: #002147;;">
+                <div class="hom-pro" style="background-color: rgb(232, 240, 245); border-radius: 20px;"> <img src="images/icon/office.jpeg" alt="" />
+                    <h4> Join over 1000 Developers </h4>
+                    <p>Choose from a collection of handpicked luxury villas & apartments</p> <a href="#!" style="background: #D9A441;">Explore Now</a> </div>
+            </div>
+            <!--HOME PROJECTS: 1-->
+            <div class="col-md-3 col-sm-6" style="border-radius: 45px; background-color: #002147;;">
+                <div class="hom-pro" style="background-color: rgb(232, 240, 245); border-radius: 20px;"> <img src="images/icon/office.jpeg" alt="" />
                     <h4>24 Million Business</h4>
-                    <p>Choose from a collection of handpicked luxury villas & apartments</p> <a href="#!">Explore Now</a> </div>
-            </div>
-            <!--HOME PROJECTS: 1-->
-            <div class="col-md-3 col-sm-6" style="border-radius: 45px; background-color: purple;">
-                <div class="hom-pro" style="background-color: rgb(232, 240, 245); border-radius: 20px;"> <img src="images/icon/office.jpeg" alt="" />
-                    <h4>1,200 Services Offered</h4>
-                    <p>Choose from a collection of handpicked luxury villas & apartments</p> <a href="#!">Explore Now</a> </div>
-            </div>
-            <!--HOME PROJECTS: 1-->
-            <div class="col-md-3 col-sm-6" style="border-radius: 45px; background-color: purple;">
-                <div class="hom-pro" style="background-color: rgb(232, 240, 245); border-radius: 20px;"> <img src="images/icon/office.jpeg" alt="" />
-                    <h4>05 Million Visitors</h4>
-                    <p>Choose from a collection of handpicked luxury villas & apartments</p> <a href="#!">Explore Now</a> </div>
-            </div>
-            <!--HOME PROJECTS: 1-->
-            <div class="col-md-3 col-sm-6" style="border-radius: 45px; background-color: purple;">
-                <div class="hom-pro" style="background-color: rgb(232, 240, 245); border-radius: 20px;"> <img src="images/icon/office.jpeg" alt="" />
-                    <h4>24 Million Business</h4>
-                    <p>Choose from a collection of handpicked luxury villas & apartments</p> <a href="#!">Explore Now</a> </div>
+                    <p>Choose from a collection of handpicked luxury villas & apartments</p> <a href="#!" style="background: #D9A441;">Explore Now</a> </div>
             </div>
         </div>
     </div>
@@ -141,12 +141,12 @@
 <section class="com-padd quic-book-ser-full">
     <div class="container">
         <div class="row">
-            <div class="com-title">
+            {{-- <div class="com-title">
                 <br>
                 <h2>Find your <span>Services</span></h2>
                 <p>Explore some of the best business from around the world from our partners and friends.</p>
-            </div>
-            <div class="dir-hli">
+            </div> --}}
+            {{-- <div class="dir-hli">
                 <ul>
                     <!--=====LISTINGS======-->
                     <li class="col-sm-4" style="border-radius: 20px; background-color: white;">
@@ -160,7 +160,7 @@
                     <li class="col-sm-4" style="border-radius: 20px; background-color: white;">
                         <h3>Marketing Partners</h3>
                         
-                    </li>
+                    </li> 
                     <!--=====LISTINGS======-->
                     <li class="col-sm-4" style="border-radius: 20px; background-color: white;">
                         <a href="list-grid.html">
@@ -173,168 +173,91 @@
                     
                    
                 </ul>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
 
 <!--EXPLORE CITY LISTING-->
-<section class="com-padd com-padd-redu-top">
+<section class="com-padd quic-book-ser-full">
     <div class="container">
         <div class="row">
             <div class="com-title">
-                <h2>Explore your <span>City Listings</span></h2>
-                <p>Explore some of the best business from around the world from our partners and friends.</p>
-            </div>
-            <div class="col-md-6" style="border: 1px solid #ddd; border-radius: 20px;">
-                <a href="list-lead.html">
+            </div>            
+            <div class="col-md-6" style="border: 0px solid #ddd; border-radius: 20px;">
+                <span>
                     <div class="list-mig-like-com">
-                        <div class="list-mig-lc-img"> <img src="{{ asset('images/office.jpeg') }}" alt="" /> </div>
-                        <div class="list-mig-lc-con">
-                            <div class="list-rat-ch list-room-rati"> <span>4.0</span> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                            <h5>United States</h5>
-                            <p>21 Cities . 2045 Listings . 3648 Users</p>
-                        </div>
+                        <div class="list-mig-lc-img"> <img src="{{ asset('images/real-estate.jpg') }}" alt=""> </div>                                            
                     </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="list-lead.html">
-                    <div class="list-mig-like-com">
-                        <div class="list-mig-lc-img"> <img src="{{ asset('images/office.jpeg') }}" alt="" /> </div>
-                        <div class="list-mig-lc-con list-mig-lc-con2">
-                            <h5>United Kingdom</h5>
-                            <p>18 Cities . 1454 Listings</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="list-lead.html">
-                    <div class="list-mig-like-com">
-                        <div class="list-mig-lc-img"> <img src="{{ asset('images/office.jpeg') }}" alt="" /> </div>
-                        <div class="list-mig-lc-con list-mig-lc-con2">
-                            <h5>Australia</h5>
-                            <p>14 Cities . 1895 Listings</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="list-lead.html">
-                    <div class="list-mig-like-com">
-                        <div class="list-mig-lc-img"> <img src="{{ asset('images/office.jpeg') }}" alt="" /> </div>
-                        <div class="list-mig-lc-con list-mig-lc-con2">
-                            <h5>Germany</h5>
-                            <p>12 Cities . 1260 Listings</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="list-lead.html">
-                    <div class="list-mig-like-com">
-                        <div class="list-mig-lc-img"> <img src="{{ asset('images/office.jpeg') }}" alt="" /> </div>
-                        <div class="list-mig-lc-con list-mig-lc-con2">
-                            <h5>India</h5>
-                            <p>24 Cities . 4152 Listings</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                </span>
+            </div>            
+            <div class="col-md-6" style="border: 0px solid; text-align: center;">
+                <h3 style="text-align: center; padding-top: 50px; padding-bottom: 20px;">BECOME AN INVESTOR</h3>
+                <p style="font-size: 24px; padding: 15px;">
+                    You can join the over 200 investors on our platform for a better ROI
+                    <br><br>
+                    <a href="{{ route('investor.register') }}"><u> Just choose your investment option</u> </a>
+                    {{-- <a href="{{ route('admin.login') }}"><u>  Admin Login</u> </a> --}}
+                </p>               
+            </div>            
         </div>
     </div>
 </section>
 <!--ADD BUSINESS-->
-<section class="com-padd home-dis">
+{{-- <section class="com-padd home-dis">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h2><span>30% Off</span> Promote Your Business with us <a href="">Add My Business</a></h2> </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 <section class="com-padd quic-book-ser-full">
-    <div class="quic-book-ser">
-        <div class="quic-book-ser-inn">
-            <div class="quic-book-ser-left">
-                <div class="land-com-form">
-                    <h2>Quick service request</h2>
-                    <form>
-                        <ul>
-                            <li>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input type="text" class="validate" required="">
-                                        <label>Name</label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input type="number" class="validate" required="">
-                                        <label>Phone number</label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input type="email" class="validate" required="">
-                                        <label>Email id</label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input type="text" id="select-category1" class="autocomplete auto-category">
-                                        <label for="select-category1" class="active">Select your Service</label>
-                                    <ul class="autocomplete-content dropdown-content"></ul></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input type="submit" value="Send Request">
-                                    </div>
-                                </div>
-                            </li>
-                            {{-- <li><p>Praesent felis velit, maximus at dapibus semper, fermentum sagittis diam. <a href="#">Privacy Policy</a></p></li> --}}
-                        </ul>
-                    </form>
-                </div>
-            </div>
-            <div class="quic-book-ser-right">
-                <div class="hom-cre-acc-left">
-                    <h3>What service do you need? <span>BeeTech</span></h3>
-                    <p>Tell us more about your requirements so that we can connect you to the right service provider.</p>
-                    <ul>
-                        <li> <img src="images/icon/7.png" alt="">
-                            <div>
-                                <h5>Tell us more about your requirements</h5>
-                                <p>Imagine you have made your presence online through a local online directory, but your competitors have..</p>
-                            </div>
-                        </li>
-                        <li> <img src="images/icon/5.png" alt="">
-                            <div>
-                                <h5>We connect with right service provider</h5>
-                                <p>Advertising your business to area specific has many advantages. For local businessmen, it is an opportunity..</p>
-                            </div>
-                        </li>
-                        <li> <img src="images/icon/6.png" alt="">
-                            <div>
-                                <h5>Happy with our service</h5>
-                                <p>Your local business too needs brand management and image making. As you know the local market..</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
+    <div class="container">
+        <div class="row">
+            <div class="com-title">
+            </div>            
+            <div class="col-md-6" style="border: 0px solid #ddd; border-radius: 20px;">
+                <span>
+                    <div class="list-mig-like-com">
+                        <div class="list-mig-lc-img"> <img src="{{ asset('images/real-estate-investing.jpg') }}" alt=""> </div>                                            
+                    </div>
+                </span>
+            </div>            
+            <div class="col-md-6" style="border: 0px solid; text-align: center;">
+                <h3 style="text-align: center; padding-top: 50px; padding-bottom: 20px;"> PROJECT OWNER ?? </h3>
+                <p style="font-size: 24px; padding: 15px;">
+                    Are you a project owner looking for investors and client
+                    <br><br>
+                    <a href="{{ route('vendor.register') }}"><u>You need to join the Beetech Platform</u> </a>
+                </p>               
+            </div>            
+        </div>
+    </div>
+</section>
+
+<section class="com-padd quic-book-ser-full">
+    <div class="container">
+        <div class="row">
+            <div class="com-title">
+            </div>            
+            <div class="col-md-6" style="border: 0px solid #ddd; border-radius: 20px;">
+                <span>
+                    <div class="list-mig-like-com">
+                        <div class="list-mig-lc-img"> <img src="{{ asset('images/Real-estate.jpg') }}" alt=""> </div>                                            
+                    </div>
+                </span>
+            </div>            
+            <div class="col-md-6" style="border: 0px solid; text-align: center;">
+                <h3 style="text-align: center; padding-top: 50px; padding-bottom: 20px;"> PROJECT OWNER ?? </h3>
+                <p style="font-size: 24px; padding: 15px;">
+                    Are you a project owner looking for investors and client
+                    <br><br>
+                    <u>You need to join the Beetech Platform</u>
+                </p>               
+            </div>            
         </div>
     </div>
 </section>
@@ -345,30 +268,33 @@
     <div class="container dir-hom-pre-tit">
         <div class="row">
             <div class="com-title">
-                <h2>Top Trendings for <span>your City</span></h2>
-                <p>Explore some of the best tips from around the world from our partners and friends.</p>
+                <h2>Top Trending <span>Project</span></h2>
+                {{-- <p>Explore some of the best tips from around the world from our partners and friends.</p> --}}
             </div>
             <div class="col-md-12">
                 @foreach ($listings as $listing)
                 <div class="col-md-6">
                     <!--POPULAR LISTINGS-->
-                    <div class="home-list-pop">
-                        <!--POPULAR LISTINGS IMAGE-->
-                        <div class="col-md-3"> <img src="images/services/tr1.jpg" alt="" /> </div>
-                        <!--POPULAR LISTINGS: CONTENT-->
-                        <div class="col-md-9 home-list-pop-desc"> <a href="automobile-listing-details.html"><h3>{{ $listing->listing_title }}</h3></a>
-                            <h4>{{ $listing->address }}</h4>
-                            <p> {{ $listing->region }}  </p> <span class="home-list-pop-rat">4.2</span>
-                            <div class="hom-list-share">
-                                <ul>
-                                    <li><a href="#!"><i class="fa fa-bar-chart" aria-hidden="true"></i> 52</a> </li>
-                                    <li><a href="#!"><i class="fa fa-heart-o" aria-hidden="true"></i> 32</a> </li>
-                                    <li><a href="#!"><i class="fa fa-eye" aria-hidden="true"></i> 420</a> </li>
-                                    <li><a href="#!"><i class="fa fa-share-alt" aria-hidden="true"></i> 570</a> </li>
-                                </ul>
+                    <a href="{{ route('listing.details', $listing->id) }}">
+                        <div class="home-list-pop">
+                            <!--POPULAR LISTINGS IMAGE-->
+                            <div class="col-md-3"> <img src="{{ asset('images/' . $listing->cover_image) }}" alt="" /> </div>
+                            <!--POPULAR LISTINGS: CONTENT-->
+                            <div class="col-md-9 home-list-pop-desc"> <h3>{{ $listing->project_title }}</h3>
+                                <h4>{{ $listing->address }}</h4>
+                                <p> {{ $listing->category }}  </p> 
+                                <div class="hom-list-share">
+                                    <ul>
+                                        <li><a href="#!"> {{ $listing->phone }}</a> </li>
+                                        <li><a href="#!"> {{ $listing->email }} </a> </li>
+                                        {{-- <li><a href="#!"><i class="fa fa-eye" aria-hidden="true"></i> $2,420</a> </li> --}}
+                                        {{-- <li><a href="#!"><i class="fa fa-share-alt" aria-hidden="true"></i> 570</a> </li> --}}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+
                     <!--POPULAR LISTINGS-->
 
                 </div>

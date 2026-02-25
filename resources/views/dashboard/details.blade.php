@@ -1,5 +1,7 @@
 @extends('layout.app')
 @section('content')
+
+{{-- {{ $listings }} --}}
 {{--
 {{ $listings->category }}
 <img src="{{ asset('images/' . $listings->image) }}" alt="">
@@ -17,17 +19,17 @@
                                 <div class="social-share">{{ $listings->pinterest }}</div> --}}
 
 
-    <section class="pg-list-1">
+    <section class="pg-list-1" style="background: url({{ asset('images/' . $listings->cover_image) }})">
 		<div class="container">
 			<div class="row">
-				<div class="pg-list-1-left"> <a href="#"><h3>{{ $listings->listing_title }}</h3></a>
+				<div class="pg-list-1-left"> <a href="#"><h3>{{ $listings->project_title }}</h3></a>
 					<div class="list-rat-ch"> <span>5.0</span> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> </div>
-					<h4>{{ $listings->region }}</h4>
+					<h4>{{ $listings->city }}</h4>
 					<p><b>Address:</b> {{ $listings->address }}</p>
 					<div class="list-number pag-p1-phone">
 						<ul>
-							<li><i class="fa fa-phone" aria-hidden="true"></i> +01 1245 2541</li>
-							<li><i class="fa fa-envelope" aria-hidden="true"></i> localdir@webdir.com</li>
+							<li><i class="fa fa-phone" aria-hidden="true"></i> {{ $listings->phone }} </li>
+							<li><i class="fa fa-envelope" aria-hidden="true"></i> {{ $listings->email }}</li>
 							<li><i class="fa fa-user" aria-hidden="true"></i> johny depp</li>
 						</ul>
 					</div>
@@ -53,7 +55,7 @@
 						<!--LISTING DETAILS: LEFT PART 1-->
 						<div class="pglist-p1 pglist-bg pglist-p-com" id="ld-abour">
 							<div class="pglist-p-com-ti">
-								<h3><span>About</span> Taj Luxury</h3> </div>
+								<h3><span>About</span> {{ $listings->project_title  }}</h3> </div>
 							<div class="list-pg-inn-sp">
 								<div class="share-btn">
 									<ul>
@@ -62,53 +64,44 @@
 										<li><a href="#"><i class="fa fa-google-plus gp1"></i> Share On Google Plus</a> </li>
 									</ul>
 								</div>
-								<p>Taj Luxury Hotels & Resorts presents award winning luxury hotels and resorts in India, Indonesia, Mauritius, Egypt and Saudi Arabia.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution </p>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+								<p> {{ $listings->description }} </p>
 							</div>
 						</div>
 						<!--END LISTING DETAILS: LEFT PART 1-->
 						<!--LISTING DETAILS: LEFT PART 2-->
 						<div class="pglist-p2 pglist-bg pglist-p-com" id="ld-ser">
 							<div class="pglist-p-com-ti">
-								<h3><span>Services</span> Offered</h3> </div>
+								<h3><span>Services / Features</span> Offered</h3> </div>
 							<div class="list-pg-inn-sp">
-								<p>Taj Luxury Hotels & Resorts provide 24-hour Business Centre, Clinic, Internet Access Centre, Babysitting, Butler Service in Villas and Seaview Suite, House Doctor on Call, Airport Butler Service, Lobby Lounge </p>
+								{{-- <p>Taj Luxury Hotels & Resorts provide 24-hour Business Centre, Clinic, Internet Access Centre, Babysitting, Butler Service in Villas and Seaview Suite, House Doctor on Call, Airport Butler Service, Lobby Lounge </p> --}}
 								<div class="row pg-list-ser">
-									<ul>
-										<li class="col-md-4">
-											<div class="pg-list-ser-p1"><img src="images/services/ser1.jpg" alt="" /> </div>
-											<div class="pg-list-ser-p2">
-												<h4>Restaurant and Bar</h4> </div>
-										</li>
-										<li class="col-md-4">
-											<div class="pg-list-ser-p1"><img src="images/services/ser2.jpg" alt="" /> </div>
-											<div class="pg-list-ser-p2">
-												<h4>Room Booking</h4> </div>
-										</li>
-										<li class="col-md-4">
-											<div class="pg-list-ser-p1"><img src="images/services/ser3.jpg" alt="" /> </div>
-											<div class="pg-list-ser-p2">
-												<h4>Corporate Events</h4> </div>
-										</li>
-										<li class="col-md-4">
-											<div class="pg-list-ser-p1"><img src="images/services/ser4.jpg" alt="" /> </div>
-											<div class="pg-list-ser-p2">
-												<h4>Wedding Hall</h4> </div>
-										</li>
-										<li class="col-md-4">
-											<div class="pg-list-ser-p1"><img src="images/services/ser5.jpg" alt="" /> </div>
-											<div class="pg-list-ser-p2">
-												<h4>Travel & Transport</h4> </div>
-										</li>
-										<li class="col-md-4">
-											<div class="pg-list-ser-p1"><img src="images/services/ser6.jpg" alt="" /> </div>
-											<div class="pg-list-ser-p2">
-												<h4>All Amenities</h4> </div>
-										</li>
-									</ul>
+									<h4 style="color: black; padding-top: 15px;">{{ $listings->feature1  }}</h4>
+									<h4 style="color: black; padding-top: 15px;">{{ $listings->feature2  }}</h4>
+									<h4 style="color: black; padding-top: 15px;">{{ $listings->feature3  }}</h4>
+									<h4 style="color: black; padding-top: 15px;">{{ $listings->feature4  }}</h4>
+									<h4 style="color: black; padding-top: 15px;">{{ $listings->feature5  }}</h4>
+									<h4 style="color: black; padding-top: 15px;">{{ $listings->feature6  }}</h4>
+									
+									
 								</div>
 							</div>
 						</div>
+
+						<div class="pglist-p2 pglist-bg pglist-p-com" id="ld-ser">
+							<div class="pglist-p-com-ti">
+								<h3><span>Video Display</span> </h3> </div>
+							<div class="list-pg-inn-sp">
+								{{-- <p>Taj Luxury Hotels & Resorts provide 24-hour Business Centre, Clinic, Internet Access Centre, Babysitting, Butler Service in Villas and Seaview Suite, House Doctor on Call, Airport Butler Service, Lobby Lounge </p> --}}
+								@if($videoId)
+									<iframe width="750" height="455"
+										src="https://www.youtube.com/embed/{{ $videoId }}"
+										frameborder="0"
+										allowfullscreen>
+									</iframe>
+								@endif
+							</div>
+						</div>
+						
 						<!--END LISTING DETAILS: LEFT PART 2-->
 						<!--LISTING DETAILS: LEFT PART 3-->
 						<div class="pglist-p3 pglist-bg pglist-p-com" id="ld-gal">
@@ -138,7 +131,7 @@
 						</div>
 						<!--END LISTING DETAILS: LEFT PART 3-->
 						<!--LISTING DETAILS: LEFT PART 4-->
-						<div class="pglist-p3 pglist-bg pglist-p-com" id="ld-roo">
+						{{-- <div class="pglist-p3 pglist-bg pglist-p-com" id="ld-roo">
 							<div class="pglist-p-com-ti">
 								<h3><span>Room</span> Booking</h3> </div>
 							<div class="list-pg-inn-sp">
@@ -174,64 +167,9 @@
 										</div>
 									</div>
 								</div>
-								<div class="home-list-pop list-spac list-spac-1 list-room-mar-o">
-									<!--LISTINGS IMAGE-->
-									<div class="col-md-3"> <img src="images/room/2.jpg" alt=""> </div>
-									<!--LISTINGS: CONTENT-->
-									<div class="col-md-9 home-list-pop-desc inn-list-pop-desc list-room-deta"> <a href="#!"><h3>Premium Rooms(Executive)</h3></a>
-										<div class="list-rat-ch list-room-rati"> <span>4.0</span> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-										<div class="list-room-type list-rom-ami">
-											<ul>
-												<li>
-													<p><b>Amenities:</b> </p>
-												</li>
-												<li><img src="images/icon/a7.png" alt=""> Wi-Fi</li>
-												<li><img src="images/icon/a4.png" alt=""> Air Conditioner </li>
-												<li><img src="images/icon/a3.png" alt=""> Swimming Pool</li>
-												<li><img src="images/icon/a2.png" alt=""> Bar</li>
-												<li><img src="images/icon/a5.png" alt=""> Bathroom</li>
-												<li><img src="images/icon/a6.png" alt=""> TV</li>
-											</ul>
-										</div> <span class="home-list-pop-rat list-rom-pric">$620</span>
-										<div class="list-enqu-btn">
-											<ul>
-												<li><a href="#!"><i class="fa fa-usd" aria-hidden="true"></i> Get Quotes</a> </li>
-												<li><a href="#!"><i class="fa fa-commenting-o" aria-hidden="true"></i> Send SMS</a> </li>
-												<li><a href="#!"><i class="fa fa-phone" aria-hidden="true"></i> Call Now</a> </li>
-												<li><a href="#!"><i class="fa fa-usd" aria-hidden="true"></i> Book Now</a> </li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="home-list-pop list-spac list-spac-1 list-room-mar-o">
-									<!--LISTINGS IMAGE-->
-									<div class="col-md-3"> <img src="images/room/3.jpg" alt=""> </div>
-									<!--LISTINGS: CONTENT-->
-									<div class="col-md-9 home-list-pop-desc inn-list-pop-desc list-room-deta"> <a href="#!"><h3>Normal Rooms(Executive)</h3></a>
-										<div class="list-rat-ch list-room-rati"> <span>3.0</span> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-										<div class="list-room-type list-rom-ami">
-											<ul>
-												<li>
-													<p><b>Amenities:</b> </p>
-												</li>
-												<li><img src="images/icon/a7.png" alt=""> Wi-Fi</li>
-												<li><img src="images/icon/a4.png" alt=""> Air Conditioner </li>
-												<li><img src="images/icon/a3.png" alt=""> Swimming Pool</li>
-												<li><img src="images/icon/a2.png" alt=""> Bar</li>
-											</ul>
-										</div> <span class="home-list-pop-rat list-rom-pric">$420</span>
-										<div class="list-enqu-btn">
-											<ul>
-												<li><a href="#!"><i class="fa fa-usd" aria-hidden="true"></i> Get Quotes</a> </li>
-												<li><a href="#!"><i class="fa fa-commenting-o" aria-hidden="true"></i> Send SMS</a> </li>
-												<li><a href="#!"><i class="fa fa-phone" aria-hidden="true"></i> Call Now</a> </li>
-												<li><a href="#!"><i class="fa fa-usd" aria-hidden="true"></i> Book Now</a> </li>
-											</ul>
-										</div>
-									</div>
-								</div>
+								
 							</div>
-						</div>
+						</div> --}}
 						<!--END 360 DEGREE MAP: LEFT PART 8-->
 
 						<!--END 360 DEGREE MAP: LEFT PART 8-->
@@ -304,7 +242,7 @@
 						</div>
 						<!--END LISTING DETAILS: LEFT PART 6-->
 						<!--LISTING DETAILS: LEFT PART 5-->
-						<div class="pglist-p3 pglist-bg pglist-p-com" id="ld-rer">
+						{{-- <div class="pglist-p3 pglist-bg pglist-p-com" id="ld-rer">
 							<div class="pglist-p-com-ti">
 								<h3><span>User</span> Reviews</h3> </div>
 							<div class="list-pg-inn-sp">
@@ -371,7 +309,7 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</div> --}}
 						<!--END LISTING DETAILS: LEFT PART 5-->
 					</div>
 					<div class="list-pg-rt">

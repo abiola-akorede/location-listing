@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Listing;
 use App\Models\Review;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,107 +17,45 @@ class ListingController extends Controller
     public function index()
     {
         $listings = Listing::all();
+        // dd($listings);
+        // $videoLink = $listings->youtube_link; // spelling matches your controller
+        // parse_str(parse_url($videoLink, PHP_URL_QUERY), $queryParams);
+        // $videoId = $queryParams['v'] ?? null;
         return view('listing.index', compact('listings'));
+    }
+
+    public function allSales()
+    {
+        $listings = Listing::where('category', 'Sales')->get();
+        return view('listing.all_sales', compact('listings'));
+    }
+    public function allRent()
+    {
+        $listings = Listing::where('category', 'Rent')->get();
+        return view('listing.all_rent', compact('listings'));
+    }
+    public function allRentToOwn()
+    {
+        $listings = Listing::where('category', 'Rent to Own')->get();
+        return view('listing.all_rent_to_own', compact('listings'));
+    }
+    public function allProject()
+    {
+        $listings = Listing::where('category', 'Project')->get();
+        return view('listing.all_project', compact('listings'));
     }
 
     public function home()
     {
         $listings = Listing::all();
-        return view('home', compact('listings'));
+        $sales_listing = Listing::where('category', 'Sales')->limit(4)->get();
+        $rent_listing = Listing::where('category', 'Rent')->limit(4)->get();
+        $rent_to_own_listing = Listing::where('category', 'Rent to Own')->limit(4)->get();
+        $project_listing = Listing::where('category', 'Project')->limit(5)->get(); 
+
+        // dd($sales_listing);
+        return view('home', compact('listings', 'sales_listing', 'rent_listing', 'rent_to_own_listing', 'project_listing'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view ('listing.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-
-        $request->validate([
-            'listing_title' => 'required',
-            'address' => 'required',
-            'phone' => 'required|unique:listings',
-            'email' => 'required|email|unique:listings',
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
-
-        if ($request->hasFile('image')) {
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $image->storeAs('public/images', $imageName);
-
-        }
-
-        $listing = Listing::create($request->all());
-        return redirect()->route('listing.index');
-    }
-
-    public function createReview(Reqeuest $request)
-    {
-        $review = Review::create($request->all());
-        return redirect()->route('listing.details');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-
-        $listings = Listing::find($id);
-        if (!$listings) {
-        // Return a 404 error response, or redirect to another page, or show an error message, etc.
-        return abort(404, 'Listing not found.');
-    }
-        return view('listing.details', compact('listings'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Listing $listing)
-    {
-        return view('listing.update', compact('listing'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
 }

@@ -29,12 +29,12 @@
 
 <body>
 	<!--PRE LOADING-->
-	<div id="preloader">
+	{{-- <div id="preloader">
 		<div id="status">&nbsp;</div>
-	</div>
+	</div> --}}
 	<!--BANNER AND SERACH BOX-->
 	<section >
-		<div class="v3-top-menu" style="background: purple;">
+		<div class="v3-top-menu" style="background: #002147;">
 			<div class="container">
 				<div class="row">
 
@@ -50,7 +50,7 @@
 				<div class="row">
 					<div class="v3-mob-menu">
 						<div class="v3-mob-m-1">
-							<a href="#"><img src="images/beetech-logo.jpg" alt="" style="width: 30%; height: 100%;"> </a>
+							<a href="#"><img src="{{ asset('images/beetech-logo.jpg') }}" alt="" style="width: 30%; height: 100%;"> </a>
 						</div>
 						<div class="v3-mob-m-2">
 							<div class="v3-top-ri">
@@ -80,7 +80,7 @@
 	<!--MOBILE APP-->
 
 	<!--FOOTER SECTION-->
-	<footer id="colophon" class="site-footer clearfix">
+	<footer id="colophon" class="site-footer clearfix" style="background: #002147;">
 		<div id="quaternary" class="sidebar-container " role="complementary">
 			<div class="sidebar-inner">
 				<div class="widget-area clearfix">
@@ -88,14 +88,14 @@
 						<div data-section="section">
 							<div class="container">
 								<div class="row">
-									<div class="col-sm-4 col-md-3 foot-logo"> <img src="images/foot-logo.png" alt="logo">
-										<p class="hasimg">Worlds's No. 1 Local Business Directory Website.</p>
+									<div class="col-sm-4 col-md-3 foot-logo"> <img src="{{ asset('images/beetech-logo.jpg') }}" alt="logo">
+										{{-- <p class="hasimg">Worlds's No. 1 Local Business Directory Website.</p> --}}
 										{{-- <p class="hasimg">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p> --}}
 									</div>
 									<div class="col-sm-4 col-md-3">
-										<h4>Support & Help</h4>
+										{{-- <h4>Support & Help</h4> --}}
 										<ul class="two-columns">
-											<li> <a href="advertise.html">Advertise us</a> </li>
+											{{-- <li> <a href="advertise.html">Advertise us</a> </li>
 											<li> <a href="about-us.html">About Us</a> </li>
 											<li> <a href="customer-reviews.html">Review</a> </li>
 											<li> <a href="how-it-work.html">How it works </a> </li>
@@ -104,13 +104,13 @@
 											<li> <a href="#!">Login</a> </li>
 											<li> <a href="#!">Quick Enquiry</a> </li>
 											<li> <a href="#!">Ratings </a> </li>
-											<li> <a href="trendings.html">Top Trends</a> </li>
+											<li> <a href="trendings.html">Top Trends</a> </li> --}}
 										</ul>
 									</div>
 									<div class="col-sm-4 col-md-3">
-										<h4>Popular Services</h4>
+										{{-- <h4>Popular Services</h4> --}}
 										<ul class="two-columns">
-											<li> <a href="#!">Hotels</a> </li>
+											{{-- <li> <a href="#!">Hotels</a> </li>
 											<li> <a href="#!">Hospitals</a> </li>
 											<li> <a href="#!">Transportation</a> </li>
 											<li> <a href="#!">Real Estates </a> </li>
@@ -119,13 +119,13 @@
 											<li> <a href="#!">Education</a> </li>
 											<li> <a href="#!">Sports Events</a> </li>
 											<li> <a href="#!">Web Services </a> </li>
-											<li> <a href="#!">Skin Care</a> </li>
+											<li> <a href="#!">Skin Care</a> </li> --}}
 										</ul>
 									</div>
 									<div class="col-sm-4 col-md-3">
-										<h4>Cities Covered</h4>
+										{{-- <h4>Cities Covered</h4> --}}
 										<ul class="two-columns">
-											<li> <a href="#!">Atlanta</a> </li>
+											{{-- <li> <a href="#!">Atlanta</a> </li>
 											<li> <a href="#!">Austin</a> </li>
 											<li> <a href="#!">Baltimore</a> </li>
 											<li> <a href="#!">Boston </a> </li>
@@ -134,7 +134,7 @@
 											<li> <a href="#!">Las Vegas</a> </li>
 											<li> <a href="#!">Los Angeles</a> </li>
 											<li> <a href="#!">Louisville </a> </li>
-											<li> <a href="#!">Houston</a> </li>
+											<li> <a href="#!">Houston</a> </li> --}}
 										</ul>
 									</div>
 								</div>
@@ -152,7 +152,7 @@
 	<!--COPY RIGHTS-->
 	<section class="copy">
 		<div class="container">
-			<p> &copy; Copyright © <span id="cryear">2017</span> Best Properties. &nbsp;&nbsp;All rights reserved. </p>
+			{{-- <p> &copy; Copyright © <span id="cryear">2017</span> Best Properties. &nbsp;&nbsp;All rights reserved. </p> --}}
 		</div>
 	</section>
 	<!--QUOTS POPUP-->

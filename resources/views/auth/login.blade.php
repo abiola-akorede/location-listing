@@ -1,56 +1,77 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+@extends('layout.app')
+@section('content')
+
+<section class="tz-register">
+    <div class="log-in-pop">
+        <div class="log-in-pop-left">
+            <h1>Hello... <span></span></h1>
+            <p>Don't have an account? Create your account. It's take less then a minutes</p>
+            <h4>Login with social media</h4>
+            <ul>
+                <li><a href="#"><i class="fa-facebook"></i> Rent to Own</a>
+                </li>
+                <li><a href="#"><i class="fa-google"></i> Buy or Sell Propertire+</a>
+                </li>
+                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="log-in-pop-right">
+            <a href="#" class="pop-close" data-dismiss="modal"><img src="images/cancel.png" alt="" />
             </a>
-        </x-slot>
+            <h4>Login</h4>
+            
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+        @endif
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+        @if (session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+        @endif
 
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
+        @endif
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+            <form class="s12" method="POST" action="{{ route('login') }}">
+                @csrf
+                <div>
+                    <div class="input-field s12">
+                        <input type="email" data-ng-model="email" name="email" value="{{ old('email') }}" placeholder="Email" class="validate">
+                        <label>Email</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-field s12">
+                        <input type="password" name="password" placeholder="Password" class="validate">
+                        <label>Password</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-field s4">
+                        <input type="submit" value="Login" class="waves-effect waves-light log-in-btn"> </div>
+                </div>
+                <div>
+                    <div class="input-field s12"> <a href="{{ route('password.request') }}">Forgot password</a> | </a> 
+                        <p>Don't have an account? <a href="{{ route('register') }}">Create a new account. It's take less then a minutes</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+    
+@endsection

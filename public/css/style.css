@@ -3682,7 +3682,7 @@
 /*-------------------------------------------------------*/
  .pg-list-1 {
      margin-top: 60px;
-     background: url(../images/list-deta/bg.jpg) no-repeat center bottom;
+     /* background: url(../images/list-deta/bg.jpg) no-repeat center bottom; */
      background-size: cover;
      position: relative;
      padding: 200px 0px 230px 0px;

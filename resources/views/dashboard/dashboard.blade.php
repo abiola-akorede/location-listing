@@ -3,35 +3,36 @@
 <div class="sb2-2-2">
     <ul>
         <li><a href="index-1.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a> </li>
-        <li class="active-bre"><a href="#"> Dashboard</a> </li>
+        <li class="active-bre"><a href="#"> Vendor Dashboard</a> </li>
         <li class="page-back"><a href="#"><i class="fa fa-backward" aria-hidden="true"></i> Back</a> </li>
     </ul>
 </div>
-<div class="tz-2 tz-2-admin" style="width: 80%;">
+<div class="tz-2 tz-2-admin" style="width: 90%;">
     <div class="tz-2-com tz-2-main">
         <h4>Manage Booking</h4>
-        <div class="tz-2-main-com bot-sp-20"> 
+        <div class="tz-2-main-com bot-sp-20">
+            {{-- <h5>Vendor Dashboard</h5> --}}
             
             <div class="tz-2-main-1 tz-3-main-admin">
                 <div class="tz-2-main-2"> 
-                    {{-- <img src="images/icon/d4.png" alt=""> --}} 
+                    {{-- <img src="images/icon/d4.png" alt=""> --}}
                     <span>All Listed Project</span>
                     {{-- <p>All the Lorem Ipsum generators on the</p> --}}
-                    <h2>2</h2> </div>
+                    <h2>{{ $number_of_project }}</h2> </div>
             </div>
             <div class="tz-2-main-1 tz-3-main-admin">
                 <div class="tz-2-main-2"> 
                     {{-- <img src="images/icon/d3.png" alt=""> --}}
                     <span>Reviews</span>
                     {{-- <p>All the Lorem Ipsum generators on the</p> --}}
-                    <h2>2</h2> </div>
+                    <h2>0</h2> </div>
             </div>
             <div class="tz-2-main-1 tz-3-main-admin">
                 <div class="tz-2-main-2"> 
                     {{-- <img src="images/icon/d2.png" alt=""> --}}
                     <span>Messages</span>
                     {{-- <p>All the Lorem Ipsum generators on the</p> --}}
-                    <h2>2</h2> </div>
+                    <h2>0</h2> </div>
             </div>
         </div>
         <div class="split-row">
@@ -56,27 +57,32 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Listing</th>
+                                        <th>ID</th>
                                         <th>Name</th>
-                                        <th>Phone</th>
-                                        <th>Exp Date</th>
-                                        <th>Country</th>
+                                        <th>Price</th>
+                                        <th>Category</th>
+                                        {{-- <th>Country</th> --}}
                                         <th>Payment</th>
                                         <th>Listing Type</th>
                                         <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($my_project as $project)
+                                        
+                                    
                                     <tr>
-                                        <td><span class="list-img"><img src="images/icon/dbr1.jpg" alt=""></span> </td>
-                                        <td><a href="#"><span class="list-enq-name">Property Luxury Homes</span><span class="list-enq-city">Illunois, United States</span></a> </td>
-                                        <td>+01 3214 6522</td>
-                                        <td>24 Dec 2017</td>
-                                        <td>Australia</td>
+                                        {{-- <td><span class="list-img"><img src="images/icon/dbr1.jpg" alt=""></span> </td> --}}
+                                        <td> {{ $project->id }} </td>
+                                        <td><a href="#"><span class="list-enq-name"> {{ $project->project_title }} </span><span class="list-enq-city"> {{ $project->address }} </span></a> </td>
+                                        <td> {{ number_format($project->price, 2) }} </td>
+                                        <td> {{ $project->category }} </td>
+                                        {{-- <td>Australia</td> --}}
                                         <td> <span class="label label-primary">Pending</span> </td>
                                         <td> <span class="label label-danger">Premium</span> </td>
                                         <td> <span class="label label-primary">Pending</span> </td>
                                     </tr>
+                                    @endforeach
                                     
                                 </tbody>
                             </table>

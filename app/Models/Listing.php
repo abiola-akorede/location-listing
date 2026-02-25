@@ -9,24 +9,33 @@ class Listing extends Model
 {
     use HasFactory;
 
-    protected $table = 'listings'; 
+    protected $table = 'listing'; 
 
     protected $fillable = [
-            'listing_title',
-            'category',
-            'description',
-            'tags',
+            'project_title',            
             'address',
-            'region', 
+            'city', 
             'phone',
             'email',
-            'website',
-            'image',
-            'video_url', 
-            'facebook',
-            'twitter',
-            'youtube',
-            'pinterest', 
-
+            'category',
+            'description',
+            'google_map',
+            'youtube_link',
+            'cover_image',
+            'photo_gallery',
+            'feature_1',
+            'price',
+            'feature_2',
+            'feature_3',
+            'feature_4',
+            'feature_5',
+            'feature_6',
+            'feature1',
+            'feature2',
+            'feature3',
+            'feature4',
+            'feature5',
+            'feature6',  
+            'user_id',
     ];
 }
